@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- prism css  -->
+    <link rel="stylesheet" href="css/prism.css">
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Lackber - Post Master</title>
+  </head>
+
+  <body>
+      <!-- navbar with logo -->
+    <div class="container-fluid bg-dark">
+      <div class="container-md container-sm">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <a class="navbar-brand mx-3" id="logo" href="#">LACKBER TECHNOLOGIES</a>
+          <p id="center-text">POST MASTER</p>
+        </nav>
+      </div>
+    </div>
+
+    <div class="container-md container-sm my-3">
+      <div class="row">
+        <div class="col-md-10 col-sm-10 offset-md-1 offset-sm-1">
+          
+            <!-- request slector with url input box  -->
+          
+            <div class="input-group mb-4">
+              <select
+                class="form-select flex-grow-0 w-auto"
+                name=""
+                id="request-selector"
+              >
+                <option value="GET" selected>GET</option>
+                <option value="POST">POST</option>
+                <option value="PUT">PUT</option>
+                <option value="PATCH">PATCH</option>
+                <option value="DELETE">DELETE</option>
+              </select>
+              <input
+                required
+                id="url"
+                class="form-control"
+                type="url"
+                placeholder="https://www.example.com"
+              />
+              <button  id="submit" class="btn btn-primary">Send</button>
+            </div>
+         
+
+          <!-- content type radios (custom para & json)  -->
+          <fieldset class="form-group">
+            <div class="row">
+              <legend class="col-form-label col-sm-2 pt-0">
+                Content Type :
+              </legend>
+              <div class="col-sm-10">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="content-type"
+                    id="params-radio"
+                    value="params"
+                    checked
+                  />
+                  <label class="form-check-label" for="params-radio">
+                    Custom Parameters
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="content-type"
+                    id="json-radio"
+                    value="json"
+                  />
+                  <label class="form-check-label" for="json-radio"> Json </label>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- custom parameter box  -->
+          <div id="custom-para-box">
+            
+            <div class="form-row">
+              <label class="col-sm-2 col-form-label" for="json">Parameter 1 :</label>
+              <div class="col-md-4">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="parameter-key-1"
+                  placeholder="Key 1"
+                />
+              </div>
+              <div class="col-md-4">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="parameter-value-1"
+                  placeholder="Value 1"
+                />
+              </div>
+              <button id="add-param" class="btn btn-primary">+</button>
+            </div>
+           
+            <div id="add-param-div-box">
+                
+            </div>
+         
+        
+        </div>
+
+          <!-- request json box  -->
+          <div id="request-json-box" class="my-3">
+            <div class="form-row">
+              <label class="col-sm-2 col-form-label" for="request-json-text">Enter Request Json :</label>
+              <textarea class="form-control col-md-8" id="request-json-text" style="background-color: #343A40; color: aliceblue;" rows="3" placeholder="Enter Json Here..."></textarea>
+              <!-- <pre id="pre-request-json-text" class="line-numbers col-md-8" contenteditable="true" ><code id="request-json-text" class="language-javascript">Enter Json Here...</code></pre> -->
+            </div>
+          </div>
+         
+          <!-- response Json box  -->
+          <div id="response-json-box" class="my-3">
+            <div class="form-row">
+              <label class="col-sm-2 col-form-label" for="response-json-text">Response :</label>
+              <!-- <textarea class="form-control col-md-8" id="response-json-text" rows="3">Your response will appear here....</textarea> -->
+              <pre id="pre-prism-box" class="line-numbers" ><code id="response-json-text" class="language-javascript">Response Will Appear Here....</code></pre>
+            </div>
+          </div>
+
+
+
+
+
+
+
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer bg-dark">
+      <div class="container">
+        <p>all ©️ copyright under lackber technologies by pankaj joshi </p>
+      </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/index.js"></script>
+    <script src="js/prism.js"></script>
+  </body>
+</html>

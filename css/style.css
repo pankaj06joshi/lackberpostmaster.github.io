@@ -1,0 +1,76 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;1,200&family=Zen+Tokyo+Zoo&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgba(32, 31, 31, 0.918);
+    color: white;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+#logo{
+    font-family: 'Zen Tokyo Zoo', cursive;
+    letter-spacing: 0.4rem;
+}
+
+p{
+    margin: 0%;
+    padding: 0%;
+}
+
+#center-text{
+    color: #fff;
+    margin: 0;
+    text-align: center;
+    width: 65%;
+    font-size: 1.3rem;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+}
+
+#pre-prism-box{
+    max-height: 30rem;
+    max-width: 50rem;
+}
+
+#custom-para-box{
+    /* display: none; */
+}
+#request-json-box{
+    display: none;
+}
+
+#request-json-text{
+    min-width: 40rem;
+    min-height: 10rem;
+    font-size: 1.2rem;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    width: 100vw;
+    height: 3rem;
+}
+footer > div > p{
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 200;
+    /* line-height: 4rem; */
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+    word-spacing: .5rem;
+    letter-spacing: 2px;
+    color: darkgray;
+}
